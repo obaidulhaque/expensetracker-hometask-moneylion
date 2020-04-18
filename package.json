@@ -1,16 +1,17 @@
 {
-  "homepage": "http://obaidulhaque.github.io/expensetracker-hometask-moneylion",
   "name": "ExpensesTracker",
   "version": "0.0.1",
   "private": true,
+  "homepage": "http://obaidulhaque.github.io/expensetracker-hometask-moneylion",
   "scripts": {
-    "predeploy": "npm run build",
-    "deploy": "gh-pages -d build",
     "android": "react-native run-android",
     "ios": "react-native run-ios",
     "start": "react-native start",
+    "build": "react-scripts build",
     "test": "jest",
-    "lint": "eslint ."
+    "lint": "eslint .",
+    "predeploy": "npm run build",
+    "deploy": "gh-pages -d build"
   },
   "dependencies": {
     "@react-native-community/masked-view": "^0.1.9",
