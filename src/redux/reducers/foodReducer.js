@@ -17,7 +17,7 @@ const initialState = {
             name: action.data,
             price: action.price
           }),
-          totalAmt: state.totalAmt + Number(action.price)
+          totalAmt: Number((state.totalAmt + Number(action.price)).toFixed(2))
         };
       case DELETE_FOOD:
         //console.log("Delete Food..........");
@@ -29,7 +29,7 @@ const initialState = {
           ...state,
           foodList: state.foodList.filter((item) =>
             item.key !== action.key),
-            totalAmt: state.totalAmt - val
+            totalAmt: Number((state.totalAmt - val).toFixed(2))
         };
       default:
         return state;
